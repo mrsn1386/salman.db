@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ create_post_form }}
+    <button type="submit">ایجاد پست جدید</button>
+</form>
+</body>
+</html>

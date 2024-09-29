@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>تمام پست ها</title>
+</head>
+<body>
+<nav>
+    <span>
+        <a href="{% url 'create_post' %}" style="margin: 30px">ساخت پست جدید</a>
+        <a href="" style="margin: 30px">پست های من</a>
+        <a href="" style="margin: 30px">پروفایل من</a>
+        <a href="" style="margin: 30px">خروج از حساب کاربری</a>
+    </span>
+</nav>
+<hr>
+{% for post in posts %}
+    <article>
+        <div>
+            <img src="{{ post.image.url }}" alt="" style="height: 200px">
+            <h3>{{ post.title }}</h3>
+            <p>{{ post.content }}</p>
+            <p>{{ post.date_posted }}</p>
+            <h5>{{ post.author}}</h5>
+            <br>
+        </div>
+    </article>
+{% endfor %}
+
+</body>
+</html>

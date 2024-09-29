@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>صحفه ورود</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ login_form }}
+    <div>
+        <button>ورود</button>
+        <a href="{% url 'forget_pass_page' %}">آیا کلمه عبور خود را فراموش کرده اید؟</a>
+    </div>
+
+</form>
+</body>
+</html>

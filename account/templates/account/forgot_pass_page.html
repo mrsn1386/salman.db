@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>فراموشی کلمه عبور</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token%}
+    {{ forget_pass_form }}
+    <button>ثبت</button>
+</form>
+</body>
+</html>
